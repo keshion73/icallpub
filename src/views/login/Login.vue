@@ -1,3 +1,5 @@
 <template>
-    <div> Login </div>
+    <div> 
+      대리점 로그인페이지
+    </div>
 </template>
