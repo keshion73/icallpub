@@ -16,3 +16,26 @@
 @import "variables/progress";
 @import "variables/sliders";
 @import "variables/stepper";
+
+@mixin pc {
+    @media (min-width: 601px){
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 600px){
+        @content;
+    }
+}
+
+$spacer:0;
+$body-font-family: 'Noto Sans KR', 'sans-serif';
+$font-size-root:10px;
+$line-height-md:inherit;
+$icon-size:20px;
+$toolbar-content-padding-y:0;
+$toolbar-content-padding-x:0;
+
+$input-icon-width:20px;
+$input-icon-height:20px;
+$input-slot-margin-bottom:0;

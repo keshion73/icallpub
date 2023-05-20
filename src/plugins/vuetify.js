@@ -4,10 +4,14 @@ import Vuetify from "vuetify/lib/framework";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 const vuetify = new Vuetify({
-  theme: { disable: true },
+  theme: {
+    disable: true,
+  },
   icons: {
     iconfont: "fa",
   },
+  treeShake: true,
+  defaultAssets: false,
 });
 
 Vue.use(Vuetify);
