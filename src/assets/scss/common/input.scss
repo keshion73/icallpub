@@ -32,6 +32,9 @@ input[type=password] {
     border: 1px solid #399FC7 !important;
     outline:none;
   }
+  &.error{
+    border: 1px solid #E61E79 !important;
+  }
 }
 
 input[type=checkbox] {
@@ -74,4 +77,10 @@ input[type=checkbox] {
     background-color: #399FC7;
     border: none
   }
+}
+.error-mes{
+  color:#E61E79;
+  font-size: 1rem;
+    margin-bottom: 10px;
+    display: inline-block
 }

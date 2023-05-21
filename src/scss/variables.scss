@@ -31,11 +31,18 @@
 $spacer:0;
 $body-font-family: 'Noto Sans KR', 'sans-serif';
 $font-size-root:10px;
-$line-height-md:inherit;
+$font-weight-bold:500;
+$font-weight-bolder:700;
+$line-height-md:0;
 $icon-size:20px;
 $toolbar-content-padding-y:0;
 $toolbar-content-padding-x:0;
-
+$breadcrumbs-margin:0;
+$breadcrumbs-padding:10px;
+$breadcrumbs-even-child-padding:8px;
+$container-max-widths: (
+    'xl': 1280px
+);
 $input-icon-width:20px;
 $input-icon-height:20px;
 $input-slot-margin-bottom:0;

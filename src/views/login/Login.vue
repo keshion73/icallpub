@@ -8,9 +8,11 @@
         <div class="d-flex">
           <p class="loginlogo"><img src="@/assets/images/icalllogo.svg" alt=""><span>대리점</span></p>
           <form action="">
-            <input type="text" placeholder="아이디">
+            <input type="text" placeholder="아이디" class="error">
+            <span class="error-mes">유효하지 않습니다.</span>
             <input type="password" placeholder="비밀번호">
-            <button type="submit" class="btn-blue">로그인</button>
+            <span class="error-mes"></span>
+            <button type="submit" class="btn btn-blue">로그인</button>
             <div class="input-chk">
               <input type="checkbox" id="login">
               <label for="login">아이디 저장</label>

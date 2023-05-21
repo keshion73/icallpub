@@ -5,7 +5,11 @@ import "@fortawesome/fontawesome-free/css/all.css";
 
 const vuetify = new Vuetify({
   theme: {
-    disable: true,
+    themes: {
+      light: {
+        primary: '#49A7CB',
+      },
+    },
   },
   icons: {
     iconfont: "fa",

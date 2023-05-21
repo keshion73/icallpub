@@ -10,6 +10,7 @@ import Distributor from '@/router/modules/distributor.js'
 import Policy from '@/router/modules/policy.js'
 import User from '@/router/modules/user.js'
 import Charge from '@/router/modules/charge.js'
+import Dist from '@/router/modules/dist.js'
 import Error from '@/views/error/Error'
 
 
@@ -28,6 +29,7 @@ export default new Router({
     ...Policy,
     ...User,
     ...Charge,
+    ...Dist,
     {
       path: '/error',
       name: 'Error',
