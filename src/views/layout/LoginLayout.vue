@@ -19,6 +19,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
-  @import '~@/assets/scss/page/login/login.scss';
+<style lang="scss" scoped>
+  .login-wrap{
+    background: #F8FAFC;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
 </style>

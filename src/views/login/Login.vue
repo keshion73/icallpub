@@ -8,11 +8,10 @@
         <div class="d-flex">
           <p class="loginlogo"><img src="@/assets/images/icalllogo.svg" alt=""><span>대리점</span></p>
           <form action="">
-            <input type="text" placeholder="아이디" class="error">
-            <span class="error-mes">유효하지 않습니다.</span>
-            <input type="password" placeholder="비밀번호">
-            <span class="error-mes"></span>
-            <button type="submit" class="btn btn-blue">로그인</button>
+            <v-text-field placeholder="아이디" outlined hide-details="auto" 
+            :error-messages="'에러메세지입니다.'"></v-text-field>
+            <v-text-field placeholder="비밀번호" hide-details="auto" outlined type="password"></v-text-field>
+            <v-btn flat color="primary" x-large block>로그인</v-btn>
             <div class="input-chk">
               <input type="checkbox" id="login">
               <label for="login">아이디 저장</label>
@@ -26,3 +25,18 @@
     </div>
   </div>
 </template>
+<script>
+
+export default {
+  components: {
+  },
+  data() {
+    return {
+      id: null,
+    };
+  },
+};
+</script>
+<style lang="scss" scoped>
+  @import '~@/assets/scss/page/login/login.scss';
+</style>

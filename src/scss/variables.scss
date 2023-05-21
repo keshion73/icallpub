@@ -46,3 +46,23 @@ $container-max-widths: (
 $input-icon-width:20px;
 $input-icon-height:20px;
 $input-slot-margin-bottom:0;
+$input-top-spacing:0;
+$text-field-active-label-height:0;
+$input-max-height:50px;
+$text-field-line-height:50px;
+$text-field-outlined-fieldset-border:1px solid #399FC7;
+$material-light: (
+  'text-fields': (
+    'outlined': #C7D1E3,
+    'outlined-hover': #399FC7,
+    'outlined-focused': #399FC7,
+  ),
+);
+$button-border-radius:4px;
+$button-font-size:17px;
+ $data-table-regular-header-height:45px;
+$data-table-regular-header-font-size:1.4rem;
+$data-table-regular-row-height:45px;
+ $data-table-regular-row-font-size:1.4rem;
+  $pagination-item-font-size:1.4rem;
+  $pagination-item-padding:0;

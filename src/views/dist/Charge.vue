@@ -1,9 +1,9 @@
 <template>
-  <div class="charge-page">
+  <div class="charge-page d-flex">
     <div class="container">
       <div class="lt">
         <h2 class="text-h2">{{ $route.name }}</h2>
-        <form action="" v-if="!$vuetify.breakpoint.xs">
+        <v-form v-if="!$vuetify.breakpoint.xs">
           <div>
             <h4 class="text-h4">예치금 잔액</h4>
             <p class="font-weight-bolder primary--text text-h6">7,200</p>
@@ -11,8 +11,8 @@
           <div>
             <h4 class="text-h4">폰번호</h4>
             <div class="input-ph">
-              <input type="text" placeholder="휴대폰번호" />
-              <button class="btn btn-blue">확인</button>
+              <v-text-field placeholder="휴대폰번호" outlined hide-details="auto"></v-text-field>
+              <v-btn flat color="primary">확인</v-btn>
             </div>
           </div>
           <div>
@@ -21,22 +21,23 @@
           </div>
           <div>
             <h4 class="text-h4">충전 잔액</h4>
-            <input type="radio" id="money1" name="radio_money" checked><label for="money1">10,000</label>
-            <input type="radio" id="money2" name="radio_money"><label for="money2">20,000</label>
-            <input type="radio" id="money3" name="radio_money"><label for="money3">30,000</label>
-            <input type="radio" id="money4" name="radio_money"><label for="money4"
-              style="margin-left: 0;">40,000</label>
-            <input type="radio" id="money5" name="radio_money"><label for="money5">50,000</label>
+            <v-radio-group v-model="radio">
+              <v-radio label="10,000" value="1" checked></v-radio>
+              <v-radio label="20,000" value="2"></v-radio>
+              <v-radio label="30,000" value="3"></v-radio>
+              <v-radio label="40,000" value="4"></v-radio>
+              <v-radio label="50,000" value="5"></v-radio>
+            </v-radio-group>
           </div>
           <div>
             <h4 class="text-h4">예치금 차감액</h4>
             <p class="font-weight-bolder">0</p>
             <p class="info-mes">예치금 차감액은 10% 차익이 있으며, 궁금한 사항은 아이콜 모바일 본사로 연락주시기 바랍니다.</p>
           </div>
-          <button class="btn btn-blue">충전</button>
-        </form>
+          <v-btn flat color="primary" x-large block>충전</v-btn>
+        </v-form>
         <div v-if="$vuetify.breakpoint.xs">
-          <form action="">
+          <v-form action="">
             <div>
               <h4 class="text-h4">예치금 잔액</h4>
               <p class="font-weight-bolder primary--text text-h6">7,200</p>
@@ -44,8 +45,8 @@
             <div>
               <h4 class="text-h4">폰번호</h4>
               <div class="input-ph">
-                <input type="text" placeholder="휴대폰번호" />
-                <button class="btn btn-blue">확인</button>
+                <v-text-field placeholder="휴대폰번호" outlined hide-details="auto"></v-text-field>
+                <v-btn flat color="primary">확인</v-btn>
               </div>
             </div>
             <div>
@@ -62,12 +63,13 @@
               <p class="font-weight-bolder primary--text text-h6">36,000</p>
               <!--일반요금제일시-->
               <div>
-                <input type="radio" id="money1" name="radio_money" checked><label for="money1">10,000</label>
-                <input type="radio" id="money2" name="radio_money"><label for="money2">20,000</label>
-                <input type="radio" id="money3" name="radio_money"><label for="money3">30,000</label>
-                <input type="radio" id="money4" name="radio_money"><label for="money4"
-                  style="margin-left: 0;">40,000</label>
-                <input type="radio" id="money5" name="radio_money"><label for="money5">50,000</label>
+                <v-radio-group v-model="radio">
+              <v-radio label="10,000" value="1" checked></v-radio>
+              <v-radio label="20,000" value="2"></v-radio>
+              <v-radio label="30,000" value="3"></v-radio>
+              <v-radio label="40,000" value="4"></v-radio>
+              <v-radio label="50,000" value="5"></v-radio>
+            </v-radio-group>
               </div>
             </div>
             <!--입력후-->
@@ -79,14 +81,14 @@
               </div>
             </div>
             <!--입력전 disabled-->
-            <button class="btn btn-blue">충전</button>
-          </form>
+            <v-btn flat color="primary" x-large block>충전</v-btn>
+          </v-form>
         </div>
       </div>
-      <div class="rt">
+      <div class="rt" v-if="!$vuetify.breakpoint.xs">
         <div>
           <h4 class="text-h4">정액제 수수료율</h4>
-          <div class="fee-list">
+          <div class="list-table">
             <div class="list-cate">
               <p>통신사</p>
               <p>수수료율</p>
@@ -184,7 +186,7 @@
         </div>
         <div>
           <h4 class="text-h4">종량제 수수료율</h4>
-          <div class="fee-list">
+          <div class="list-table">
             <div class="list-cate">
               <p>통신사</p>
               <p>수수료율</p>
@@ -280,7 +282,8 @@
     components: {},
     data() {
       return {
-        prepayment: true
+        prepayment: true,
+        radio: "1",
       }
     },
   }

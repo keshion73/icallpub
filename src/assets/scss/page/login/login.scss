@@ -1,14 +1,12 @@
 .login-wrap {
-  background: #F8FAFC;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .d-flex{
+      display: flex;
+    }
 
   .login-cont {
     background: #FFFFFF;
     .loginform {
+      form{width:100%;}
       .loginlogo {
         font-weight: 500;
         color: #399FC7;
