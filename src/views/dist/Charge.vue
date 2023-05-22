@@ -64,12 +64,12 @@
               <!--일반요금제일시-->
               <div>
                 <v-radio-group v-model="radio">
-              <v-radio label="10,000" value="1" checked></v-radio>
-              <v-radio label="20,000" value="2"></v-radio>
-              <v-radio label="30,000" value="3"></v-radio>
-              <v-radio label="40,000" value="4"></v-radio>
-              <v-radio label="50,000" value="5"></v-radio>
-            </v-radio-group>
+                  <v-radio label="10,000" value="1" checked></v-radio>
+                  <v-radio label="20,000" value="2"></v-radio>
+                  <v-radio label="30,000" value="3"></v-radio>
+                  <v-radio label="40,000" value="4"></v-radio>
+                  <v-radio label="50,000" value="5"></v-radio>
+                </v-radio-group>
               </div>
             </div>
             <!--입력후-->
@@ -274,20 +274,121 @@
           </div>
         </div>
       </div>
+      <v-data-table :headers="headers" :items="arr1" hide-default-footer no-data-text="데이터가 없습니다.">
+        <template #[`item.sales_discount_rate`]="{ item }">
+          <span>
+            {{ item.sales_discount_rate }}%
+          </span>
+        </template>
+      </v-data-table>
     </div>
   </div>
 </template>
 <script>
-  export default {
-    components: {},
-    data() {
-      return {
-        prepayment: true,
-        radio: "1",
-      }
-    },
-  }
+export default {
+  components: {},
+  data() {
+    return {
+      prepayment: true,
+      radio: "1",
+      headers: [{
+        text: '통신사',
+        value: 'mvno_name',
+        sortable: false,
+        width: '7%'
+      },
+      {
+        text: '수수료율',
+        value: 'sales_discount_rate',
+        sortable: false,
+        width: '7%'
+      }],
+      arr1: [
+        {
+          mvno_name: "스마텔",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "SK/T",
+          sales_discount_rate: "8"
+        },
+        {
+          mvno_name: "KT",
+          sales_discount_rate: "9"
+        },
+        {
+          mvno_name: "텔링크",
+          sales_discount_rate: "8"
+        },
+        {
+          mvno_name: "모빙",
+          sales_discount_rate: "9"
+        },
+        {
+          mvno_name: "아이즈모바일",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "이지",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "스노우맨",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "마이월드",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "훔",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "웰",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "K mobile",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "프리티",
+          sales_discount_rate: "9"
+        },
+        {
+          mvno_name: "큰사람",
+          sales_discount_rate: "8"
+        },
+        {
+          mvno_name: "블루모바일",
+          sales_discount_rate: "9"
+        },
+        {
+          mvno_name: "드림모바일",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "에이플러스",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "밸류컴",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "슈가모바일",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "인스모바일",
+          sales_discount_rate: "10"
+        }
+      ]
+    }
+  },
+}
 </script>
 <style lang="scss" scoped>
-  @import '~@/assets/scss/page/charge/charge.scss';
+@import '~@/assets/scss/page/charge/charge.scss';
 </style>
