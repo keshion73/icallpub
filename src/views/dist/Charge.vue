@@ -88,199 +88,25 @@
       <div class="rt" v-if="!$vuetify.breakpoint.xs">
         <div>
           <h4 class="text-h4">정액제 수수료율</h4>
-          <div class="list-table">
-            <div class="list-cate">
-              <p>통신사</p>
-              <p>수수료율</p>
-            </div>
-            <div>
-              <p>텔링크</p>
-              <p>5.0%</p>
-            </div>
-            <div>
-              <p>드림모바일</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>이지</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>큰사람</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>아이즈비전</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>프리티</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>미디어로그</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>마이월드</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>원텔</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>스마텔</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>홈</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>여유텔레콤</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>스노우맨</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>밸류컴</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>에이플러스KT</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>에이플러스LG</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>인스코리아</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>슈가모바일</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>NIZ텔레콤(17000)</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>NIZ텔레콤(25000)</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>NIZ텔레콤(35000)</p>
-              <p>8.0%</p>
-            </div>
-
-            <div>
-              <p>NIZ텔레콤(45000)</p>
-              <p>8.0%</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-h4">종량제 수수료율</h4>
-          <div class="list-table">
-            <div class="list-cate">
-              <p>통신사</p>
-              <p>수수료율</p>
-            </div>
-            <div>
-              <p>SK/T</p>
-              <p>5.0%</p>
-            </div>
-            <div>
-              <p>KT</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>텔링크</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>모빙</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>아이즈모바일</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>이지</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>스노우맨</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>마이월드</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>홈</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>웰</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>K mobile</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>프리티</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>큰사람</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>블루모바일</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>드림모바일</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>스마텔</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>에이플러스</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>밸류컴</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>슈가모바일</p>
-              <p>8.0%</p>
-            </div>
-            <div>
-              <p>인스모바일</p>
-              <p>8.0%</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <v-data-table :headers="headers" :items="arr1" hide-default-footer no-data-text="데이터가 없습니다.">
+          <v-data-table :headers="headers" :items="arr1" hide-default-footer no-data-text="데이터가 없습니다.">
         <template #[`item.sales_discount_rate`]="{ item }">
           <span>
             {{ item.sales_discount_rate }}%
           </span>
         </template>
       </v-data-table>
+        </div>
+        <div>
+          <h4 class="text-h4">종량제 수수료율</h4>
+          <v-data-table :headers="headers" :items="arr2" hide-default-footer no-data-text="데이터가 없습니다.">
+        <template #[`item.sales_discount_rate`]="{ item }">
+          <span>
+            {{ item.sales_discount_rate }}%
+          </span>
+        </template>
+      </v-data-table>
+        </div>
+      </div>      
     </div>
   </div>
 </template>
@@ -295,19 +121,98 @@ export default {
         text: '통신사',
         value: 'mvno_name',
         sortable: false,
-        width: '7%'
+        width: '10%'
       },
       {
         text: '수수료율',
         value: 'sales_discount_rate',
         sortable: false,
-        width: '7%'
+        width: '7%',
+        align: 'right',
       }],
       arr1: [
         {
           mvno_name: "스마텔",
           sales_discount_rate: "10"
         },
+        {
+          mvno_name: "SK/T",
+          sales_discount_rate: "8"
+        },
+        {
+          mvno_name: "KT",
+          sales_discount_rate: "9"
+        },
+        {
+          mvno_name: "텔링크",
+          sales_discount_rate: "8"
+        },
+        {
+          mvno_name: "모빙",
+          sales_discount_rate: "9"
+        },
+        {
+          mvno_name: "아이즈모바일",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "이지",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "스노우맨",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "마이월드",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "훔",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "웰",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "K mobile",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "프리티",
+          sales_discount_rate: "9"
+        },
+        {
+          mvno_name: "큰사람",
+          sales_discount_rate: "8"
+        },
+        {
+          mvno_name: "블루모바일",
+          sales_discount_rate: "9"
+        },
+        {
+          mvno_name: "드림모바일",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "에이플러스",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "밸류컴",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "슈가모바일",
+          sales_discount_rate: "10"
+        },
+        {
+          mvno_name: "인스모바일",
+          sales_discount_rate: "10"
+        }
+      ],
+      arr2: [
         {
           mvno_name: "SK/T",
           sales_discount_rate: "8"
@@ -391,4 +296,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '~@/assets/scss/page/charge/charge.scss';
+::v-deep{
+.v-data-table{
+        th,td{
+        padding: 0 26px !important;
+      }
+    }
+}
 </style>

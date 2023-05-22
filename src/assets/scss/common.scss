@@ -410,6 +410,10 @@ span {
         text-align: center;
         height: 100%;
         line-height: 60px;
+        &:hover{
+          background: rgba(57, 159, 199, 0.1);
+          color: #399FC7;
+        }
       }
     }
   }

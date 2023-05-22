@@ -78,14 +78,8 @@
       font-weight: 500;
       margin-bottom: 8px;
     }
-
-    .list-table {
-      width: 300px;
-
-      >div {
-        height: 32px;
-        font-size: 1.2rem;
-      }
+    .v-data-table{
+      background: none;
     }
   }
 }
@@ -200,6 +194,10 @@
       >div+div {
         margin-left: 90px;
       }
+      .v-data-table{
+      width:300px;
+      overflow: hidden;
+    }
     }
 
     .chargehis-input {

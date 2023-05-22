@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar :height="60" :elevation="0" @mouseleave="drawer = false">
+  <v-app-bar :height="60" :elevation="0">
     <div class="hd-wrap">
       <div class="hd-cont">
         <div class="logo">
