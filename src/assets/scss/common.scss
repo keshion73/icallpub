@@ -408,15 +408,24 @@ span {
       font-weight: 500;
       cursor: pointer;
 
-      p {
+      a {
         width: 25%;
         text-align: center;
         height: 100%;
         line-height: 60px;
+        color:#000;
+        text-decoration: none;
 
         &:hover {
           background: rgba(57, 159, 199, 0.1);
           color: #399FC7;
+        }
+        &.router-link-active:after{
+          display:block;
+          content: '';
+          height: 4px;
+          background:  #399FC7;
+          margin:-4px 40px 0
         }
       }
     }

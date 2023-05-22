@@ -5,11 +5,11 @@
         <div class="logo">
           <img src="@/assets/images/icalllogo.svg" alt=""><span>대리점</span>
         </div>
-        <div class="gnb" v-if="!$vuetify.breakpoint.xs">
-          <p @mouseenter="drawer = true">가입자 현황</p>
-          <p @mouseenter="drawer = true">충전</p>
-          <p @mouseenter="drawer = true">게시판</p>
-          <p @mouseenter="drawer = true">내정보</p>
+        <div class="gnb" v-if="!$vuetify.breakpoint.xs" @mouseenter="drawer = true">
+          <router-link to="#">가입자 현황</router-link>
+          <router-link to="/dist/Charge">충전</router-link>
+          <router-link to="#">게시판</router-link>
+          <router-link to="#">내정보</router-link>
         </div>
         <div :class="[{'active':drawer},'all-menu']" @click="drawer = !drawer">
           <span></span>
