@@ -146,11 +146,35 @@
     margin-top: 16px;
   }
 }
+.refund-page{
+      background: #fff;
+      height: 100%;
+      .container{
+        width:300px;
+        min-width: auto;
+        padding: 30px 0;
+        .text-h2{
+          margin-bottom: 24px;
+          text-align: center;
+        }
+        .text-h4{
+          margin-bottom: 8px;
+        }
+        >div + div{
+          margin-top: 24px;
+        }
+        .v-btn{
+        margin-top: 20px;
+      }
+      }
+    }
 
 @include pc {
   .charge-page {
     background-image: linear-gradient(to right, #fff 35%, #F6F8FA 35%);
-
+    .container {
+    display: flex;
+  }
     .lt {
       width: 35%;
       padding: 30px 50px;
@@ -188,16 +212,14 @@
       }
     }
   }
-
-  .container {
-    display: flex;
-  }
+  
   .v-data-table {
     min-height: 700px;
       table {
         width: auto !important;
       }
     }
+    
 }
 
 @include mobile {
