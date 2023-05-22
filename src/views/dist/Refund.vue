@@ -12,11 +12,11 @@
       </div>
       <div>
         <h4 class="text-h4">환불 요청 금액</h4>
-        <v-text-field placeholder="숫자만 입력해 주세요." outlined hide-details="auto"></v-text-field>
+        <v-text-field placeholder="숫자만 입력해 주세요." outlined ></v-text-field>
       </div>
       <div>
         <h4 class="text-h4">환불 사유</h4>
-        <v-textarea placeholder="환불 사유를 입력해 주세요" outlined hide-details="auto" no-resize rows="10"></v-textarea>
+        <v-textarea placeholder="환불 사유를 입력해 주세요" outlined  no-resize rows="10"></v-textarea>
       </div>
       <v-btn flat color="primary" x-large block>환불 요청</v-btn>
     </div>

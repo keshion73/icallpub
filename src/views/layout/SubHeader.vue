@@ -18,11 +18,13 @@
               <p class="mark">잔액</p>
              <p><span class="font-weight-bolder">7,200 </span>원</p>
             </div>
-            <div class="d-flex">
+            <div class="d-flex bank">
               <p class="mark">전용계좌</p>
-             <p class="font-weight-bold">79606702902101</p>
+              <div class="d-flex">
+                <p class="font-weight-bold" style="display: inline-block">79606702902101</p>
              <button><img src="@/assets/images/common/icon-copy.svg" alt=""></button>
              <p>카카오뱅크 / (주)아이콜모바일</p>
+              </div>             
             </div>
             <div class="d-flex">
               <p class="mark">USIM</p>
@@ -35,8 +37,10 @@
               <p class="font-weight-bold">010.1234.1234  (예자인)</p>
             </div>
             <div class="d-flex">
+              <div>
               <img src="@/assets/images/common/icon-people.svg" alt="">
-              <p class="font-weight-bold">Yesign</p>
+              <p class="font-weight-bold" style="display: inline-block;">Yesign</p>
+              </div>
               <button>로그아웃</button>
             </div>
           </div>

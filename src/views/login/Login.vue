@@ -8,9 +8,9 @@
                 <div class="d-flex">
                     <p class="loginlogo"><img src="@/assets/images/icalllogo.svg" alt=""><span>대리점</span></p>
                     <form action="">
-                        <v-text-field placeholder="아이디" outlined hide-details="auto" :error-messages="'에러메세지입니다.'"
+                        <v-text-field placeholder="아이디" outlined 
                             :rules="[rules.inputUserId.required, rules.inputUserId.length, rules.inputUserId.charValid]"></v-text-field>
-                        <v-text-field placeholder="비밀번호" hide-details="auto" outlined type="password"
+                        <v-text-field placeholder="비밀번호" outlined type="password"
                             :rules="[rules.inputUserPassword.required, rules.inputUserPassword.length, rules.inputUserPassword.charValid]"></v-text-field>
                         <v-btn flat color="primary" x-large block>로그인</v-btn>
                         <div class="input-chk">

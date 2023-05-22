@@ -11,7 +11,7 @@
           <div>
             <h4 class="text-h4">폰번호</h4>
             <div class="input-ph">
-              <v-text-field placeholder="휴대폰번호" outlined hide-details="auto"></v-text-field>
+              <v-text-field placeholder="휴대폰번호" outlined></v-text-field>
               <v-btn flat color="primary">확인</v-btn>
             </div>
           </div>
@@ -45,7 +45,7 @@
             <div>
               <h4 class="text-h4">폰번호</h4>
               <div class="input-ph">
-                <v-text-field placeholder="휴대폰번호" outlined hide-details="auto"></v-text-field>
+                <v-text-field placeholder="휴대폰번호" outlined></v-text-field>
                 <v-btn flat color="primary">확인</v-btn>
               </div>
             </div>

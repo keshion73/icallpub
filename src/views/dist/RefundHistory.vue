@@ -14,7 +14,7 @@
               <v-menu v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y>
                 <template v-slot:activator="{ on, attrs }">
                   <!-- YY-MM-DD형식 -->
-                  <v-text-field v-model="s_date" v-bind="attrs" outlined hide-details="auto" v-on="on"
+                  <v-text-field v-model="s_date" v-bind="attrs" outlined  v-on="on"
                     prepend-inner-icon="fa-"></v-text-field>
                 </template>
                 <v-date-picker v-model="s_date" no-title @input="menu = false"></v-date-picker>
@@ -24,7 +24,7 @@
             <div>
               <v-menu v-model="menu2" :close-on-content-click="false" transition="scale-transition" offset-y>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-text-field v-model="e_date" v-bind="attrs" outlined hide-details="auto" v-on="on"
+                  <v-text-field v-model="e_date" v-bind="attrs" outlined  v-on="on"
                     prepend-inner-icon="fa-" type="number"></v-text-field>
                 </template>
                 <v-date-picker v-model="e_date" no-title @input="menu2 = false"></v-date-picker>
@@ -34,11 +34,11 @@
         </div>
         <div class="d-flex">
           <p>환불번호</p>
-          <v-text-field placeholder="숫자만 입력해 주세요." outlined hide-details="auto"></v-text-field>
+          <v-text-field placeholder="숫자만 입력해 주세요." outlined ></v-text-field>
         </div>
         <div class="d-flex">
           <p>진행상황</p>
-          <v-select v-model="selected" :items="items" outlined hide-details="auto" dense :menu-props="{ offsetY: true }"></v-select>
+          <v-select v-model="selected" :items="items" outlined  dense :menu-props="{ offsetY: true }"></v-select>
         </div>
         <div>
           <v-btn flat color="primary">조회</v-btn>
