@@ -28,4 +28,9 @@ export default {
   align-items: center;
   justify-content: center;
   }
+  @include mobile {
+    .login-wrap{
+      height:90vh;
+    }
+  }
 </style>

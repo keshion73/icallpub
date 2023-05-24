@@ -614,7 +614,7 @@ span {
           }
         }
 
-        &--active {
+        &--active.v-list-group__header {
           border-bottom: 1px solid #000000;
 
           .v-list-item__title {
@@ -646,4 +646,9 @@ span {
   p {
     word-break: keep-all;
   }
+}
+.v-picker--date{
+.v-date-picker-header__value button{
+  font-size: 1.4rem;
+}
 }
