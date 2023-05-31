@@ -2,8 +2,9 @@
   height: 100%;
   background: #fff;
 
-  .container {
-    padding: 30px 0;
+  .charge-cont {
+    padding: 30px 0 0;
+    width: 100%;
     height: 100%;
     letter-spacing: -0.6px;
     position: relative;
@@ -18,8 +19,65 @@
     }
 
     .v-form {
-      width: 300px;
-      margin: 0 auto;
+      >div:not(.charge-bg) {
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      .charge-bg {
+        >div,
+        button {
+          width: 300px;
+          min-width: auto !important;
+          margin: 0 auto;
+        }
+
+        >div+div {
+          margin-top: 32px !important;
+        }
+
+        >div:first-of-type .d-flex {
+          align-items: center;
+
+          p {
+            color: #00648A;
+            font-weight: 700;
+          }
+
+
+          .mark {
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 22px;
+            line-height: 18px;
+            color: #00648A;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-right: 6px;
+            background: rgba(73, 167, 203, 0.2);
+          }
+
+          .mark-oth {
+            width: 77px;
+            background: rgba(229, 30, 120, 0.2);
+            color: #E51E78;
+            margin-left: 12px;
+
+            img {
+              margin-right: 6px;
+            }
+          }
+        }
+
+        button {
+          margin-top: 24px;
+        }
+      }
+
     }
   }
 
@@ -54,7 +112,7 @@
 
   .v-form {
     >button {
-      margin-top: 2.4rem;
+      margin-top: 24px;
     }
 
     >div {
@@ -65,7 +123,7 @@
       }
 
       +div {
-        margin-top: 32px;
+        margin-top: 32px !important;
       }
 
       p.info-mes {
@@ -110,9 +168,27 @@
 
   .btn-sales {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     right: 0;
+  }
+
+  .charge-noti {
+    width: 300px;
+    padding: 18px 30px 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(73, 167, 203, 0.5);
+    border-radius: 8px;
+
+    h4 {
+      color: #49A7CB;
+      font-size: 1.5rem !important;
+      margin-bottom: 30px;
+    }
+
+    p {
+      line-height: 24px !important;
+    }
   }
 }
 
@@ -244,6 +320,7 @@
 
       }
     }
+
   }
 
   .refund-req {
@@ -262,19 +339,6 @@
 @include pc {
   .charge-page {
 
-    form {
-
-      div {
-
-        &:nth-of-type(3) {
-          p {
-            font-size: 1.6rem;
-            font-weight: 500;
-          }
-        }
-      }
-    }
-
     .chargehis-input {
       .container {
         >.d-flex {
@@ -284,8 +348,30 @@
         }
       }
     }
-    .charge-bg{
-      margin-top: 80px !important;
+
+    .v-form{
+      height: calc(100% - 70px);
+    overflow: hidden;
+    }
+    .charge-bg {
+      height: calc(100% - 200px);
+      padding: 40px 0 120px;
+      background: rgba(57, 159, 199, 0.05) url('~@/assets/images/page/charge/charge-bg.png') no-repeat bottom left;
+    }
+
+    .noti-cont {
+      position: absolute;
+      top: 50%;
+      height: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .charge-noti {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 
@@ -293,24 +379,19 @@
 
 @include mobile {
   .charge-page {
-    .lt {
-      padding: 40px;
+    .charge-bg {
+      background: rgba(57, 159, 199, 0.05);
+      padding: 40px 0;
 
-      form {
-        div {
-          font-size: 1.6rem;
-          font-weight: 500;
+      button {
+        margin-bottom: 40px !important;
+      }
+
+        >div:first-of-type .d-flex {
+          p {
+            color: #49A7CB !important;
+          }
         }
-      }
-    }
-
-    .rt {
-      padding: 40px;
-      flex-direction: column;
-
-      >div+div {
-        margin-top: 20px;
-      }
     }
   }
 
@@ -389,18 +470,19 @@
         width: calc(33.33% - 8px);
         height: 48px !important;
         line-height: 46px;
-        border: 1px solid #C7D1E3;
         border-radius: 8px;
         text-align: center;
         font-size: 1.6rem;
         cursor: pointer;
         font-weight: 400;
+        background: #FFFFFF;
+        border: 1px solid #C7D1E3;
       }
 
       &.v-item--active {
         .v-label {
-          border: 1px solid #49A7CB;
-          background: #49A7CB;
+          border: 1px solid #00648A;
+          background: #00648A;
           color: #fff;
           font-weight: 700;
         }
