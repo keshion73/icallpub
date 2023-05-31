@@ -1,17 +1,16 @@
 .charge-page {
   height: 100%;
+  background: #fff;
 
   .container {
+    padding: 30px 0;
     height: 100%;
     letter-spacing: -0.6px;
-  }
-
-  .lt {
-    background: #fff;
+    position: relative;
 
     h2 {
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 40px;
     }
 
     h4 {
@@ -19,68 +18,101 @@
     }
 
     .v-form {
-      >button {
-        margin-top: 2.4rem;
-      }
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
 
-      >div {
+  .charge-info {
+    background: #49A7CB;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    padding: 12px 16px;
+    overflow: hidden;
+    color: #fff;
+
+    p {
+      float: right;
+
+      span {
+        vertical-align: baseline;
+
         &:first-child {
-          p {
-            line-height: 1;
-          }
+          font-weight: 700;
+          font-size: 3.2rem;
+          line-height: 46px;
         }
 
-        +div {
-          margin-top: 28px;
-        }
-
-        p.info-mes {
+        &:last-child {
           font-size: 1.4rem;
-          margin-top: 8px;
-          color: #666666;
-          font-weight: 400;
-
-        }
-
-        &:nth-of-type(5) {
-          p.font-weight-bolder {
-            font-size: 2rem;
-            color: #666666;
-            line-height: 1;
-          }
-        }
-      }
-
-      .input-ph {
-        display: flex;
-        position: relative;
-
-        input {
-          padding-right: 80px;
-        }
-
-        button {
-          height: 49px;
-          padding: 0 22px;
-          border-radius: 0 4px 4px 0;
-          position: absolute;
-          top: 1px;
-          right: 0
+          font-weight: 500 !important;
+          margin-left: 5px;
         }
       }
     }
   }
 
-  .rt {
-    display: flex;
+  .v-form {
+    >button {
+      margin-top: 2.4rem;
+    }
 
-    h4 {
-      font-weight: 500;
-      margin-bottom: 8px;
+    >div {
+      &:first-child {
+        p {
+          line-height: 1;
+        }
+      }
+
+      +div {
+        margin-top: 32px;
+      }
+
+      p.info-mes {
+        font-size: 1.4rem;
+        margin-top: 8px;
+        color: #666666;
+        font-weight: 400;
+
+      }
+
+      &:nth-of-type(5) {
+        p.font-weight-bolder {
+          font-size: 2rem;
+          color: #666666;
+          line-height: 1;
+        }
+      }
+
+      p {
+        line-height: 1;
+      }
     }
-    .v-data-table{
-      background: none;
+
+    .input-ph {
+      display: flex;
+      position: relative;
+
+      input {
+        padding-right: 80px;
+      }
+
+      button {
+        height: 49px;
+        padding: 0 22px;
+        border-radius: 0 4px 4px 0;
+        position: absolute;
+        top: 1px;
+        right: 0;
+      }
     }
+  }
+
+  .btn-sales {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
   }
 }
 
@@ -128,7 +160,7 @@
 
     }
 
-    .input-date  {
+    .input-date {
       .v-input {
         max-width: 140px;
         font-weight: 500;
@@ -140,64 +172,107 @@
     margin-top: 16px;
   }
 }
-.refund-page{
-      background: #fff;
-      height: 100%;
-      .container{
-        width:300px;
-        min-width: auto;
-        padding: 30px 0;
-        .text-h2{
-          margin-bottom: 24px;
-          text-align: center;
-        }
-        .text-h4{
-          margin-bottom: 8px;
-        }
-        >div + div{
-          margin-top: 24px;
-        }
-        .v-btn{
-        margin-top: 20px;
-      }
-      }
+
+.refund-page {
+  background: #fff;
+  height: 100%;
+
+  .container {
+    width: 300px;
+    min-width: auto;
+    padding: 30px 0;
+
+    .text-h2 {
+      margin-bottom: 24px;
+      text-align: center;
     }
 
-@include pc {
-  .charge-page {
-    background-image: linear-gradient(to right, #fff 35%, #F6F8FA 35%);
-    .container {
-    display: flex;
+    .text-h4 {
+      margin-bottom: 8px;
+    }
+
+    >div:last-of-type {
+      margin-top: 24px;
+    }
+
+    .v-btn {
+      margin-top: 20px;
+    }
   }
-    .lt {
-      width: 35%;
-      padding: 30px 50px;
 
-      form {
-        width: 300px;
+  .refund-info {
+    background: #49A7CB;
+    border-radius: 10px;
+    margin-bottom: 12px;
 
-        div {
+    >div:first-child {
+      padding: 12px 16px;
+      overflow: hidden;
+      color: #fff;
 
-          &:nth-of-type(3) {
-            p {
-              font-size: 1.6rem;
-              font-weight: 500;
-            }
+      p {
+        float: right;
+
+        span {
+          vertical-align: baseline;
+
+          &:first-child {
+            font-weight: 700;
+            font-size: 3.2rem;
+          }
+
+          &:last-child {
+            font-size: 1.4rem;
+            font-weight: 500 !important;
+            margin-left: 5px;
           }
         }
       }
     }
 
-    .rt {
-      padding: 30px 0 30px 80px;
+    >div:last-child {
+      background: #C6E2ED;
+      padding: 12px 16px;
+      border-radius: 0 0 10px 10px;
+      font-size: 1.2rem;
 
-      >div+div {
-        margin-left: 90px;
+      h4 {
+        margin: 0 11px 0 0;
+        color: #49A7CB;
+        font-size: 1.2rem !important;
+        font-weight: 500 !important;
+
       }
-      .v-data-table{
-      width:300px;
-      overflow: hidden;
     }
+  }
+
+  .refund-req {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1;
+    margin-bottom: 20px;
+
+    img {
+      margin-right: 6px;
+      vertical-align: top;
+    }
+  }
+}
+
+@include pc {
+  .charge-page {
+
+    form {
+
+      div {
+
+        &:nth-of-type(3) {
+          p {
+            font-size: 1.6rem;
+            font-weight: 500;
+          }
+        }
+      }
     }
 
     .chargehis-input {
@@ -209,15 +284,11 @@
         }
       }
     }
-  }
-  
-  .v-data-table {
-    min-height: 700px;
-      table {
-        width: auto !important;
-      }
+    .charge-bg{
+      margin-top: 80px !important;
     }
-    
+  }
+
 }
 
 @include mobile {
@@ -282,6 +353,14 @@
       min-height: 300px;
     }
   }
+
+  .refund-page {
+    .container {
+      >div:last-of-type {
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 ::v-deep {
@@ -330,15 +409,15 @@
   }
 
   .chargehis-input {
-    .input-date  .v-input__slot {
+    .input-date .v-input__slot {
       background: url('~@/assets/images/common/input-date.svg') no-repeat center left 15px;
       padding: 0 12px 0 50px;
     }
   }
 
-    .v-data-table.mobile-table {
-      table {
-        width: 1000px !important;
-      }
+  .v-data-table.mobile-table {
+    table {
+      width: 1000px !important;
     }
+  }
 }

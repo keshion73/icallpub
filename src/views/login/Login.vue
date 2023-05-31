@@ -12,7 +12,7 @@
                             :rules="[rules.inputUserId.required, rules.inputUserId.length, rules.inputUserId.charValid]"></v-text-field>
                         <v-text-field placeholder="비밀번호" outlined type="password"
                             :rules="[rules.inputUserPassword.required, rules.inputUserPassword.length, rules.inputUserPassword.charValid]"></v-text-field>
-                        <v-btn flat color="primary" x-large block>로그인</v-btn>
+                        <v-btn color="btncolor" x-large block>로그인</v-btn>
                         <div class="input-chk">
                             <input type="checkbox" id="login">
                             <label for="login">아이디 저장</label>

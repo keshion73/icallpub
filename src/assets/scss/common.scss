@@ -232,16 +232,8 @@ span {
           font-size: 1.2rem;
         }
       }
-
-      &:last-child {
-        margin-left: 40px;
-
-        p {
-          font-size: 1.6rem;
-          margin: 0 13px 0 7px;
-        }
-
-        button {
+    }
+    button.logout-btn {
           background: #fff;
           border-radius: 10px;
           display: inline-block;
@@ -253,8 +245,6 @@ span {
           font-weight: 500;
           font-size: 1rem;
         }
-      }
-    }
 
     .mark {
       border: 1px solid #399FC7;
@@ -337,7 +327,7 @@ span {
       border-top: solid 1px #399FC7;
       border-bottom: solid 1px #399FC7 !important;
       color: #399FC7 !important;
-      font-weight: 700;
+      font-weight: 500;
     }
   }
 }
@@ -437,6 +427,9 @@ span {
     &--open {
       transform: translateY(0) !important;
     }
+  }
+  button.logout-btn{
+    margin-left: 40px;
   }
 
   .v-navigation-drawer__content {
@@ -562,12 +555,12 @@ span {
       div+div {
         margin: 10px 0 0 0;
       }
-
-      >div:last-child {
-        margin: 0 0 20px 0;
+       >div.d-flex:first-child {
         width: 100%;
         justify-content: space-between;
-        order: -1;
+      }
+      >div.d-flex:last-child{
+        font-size: 1.2rem;
       }
 
       div.bank {
@@ -618,6 +611,7 @@ span {
           border-bottom: 1px solid #000000;
 
           .v-list-item__title {
+            color: #399FC7 !important;
             font-weight: 700 !important;
           }
         }

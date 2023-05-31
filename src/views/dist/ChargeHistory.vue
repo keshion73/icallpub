@@ -42,7 +42,7 @@
           <v-text-field placeholder="숫자만 입력해 주세요." outlined hide-details="auto"></v-text-field>
         </div>
         <div>
-          <v-btn flat color="primary">조회</v-btn>
+          <v-btn  color="btncolor">조회</v-btn>
         </div>
       </div>
     </div>

@@ -41,7 +41,7 @@
           <v-select v-model="selected" :items="items" outlined  dense :menu-props="{ offsetY: true }"></v-select>
         </div>
         <div>
-          <v-btn flat color="primary">조회</v-btn>
+          <v-btn  color="btncolor">조회</v-btn>
         </div>
       </div>
     </div>
