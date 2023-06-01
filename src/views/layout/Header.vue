@@ -32,6 +32,7 @@
          <SubHeader></SubHeader>
       </div>
       <div class="sub-menu">
+        <v-list>
          <v-list-group
         v-for="(item, i) in submenu"
         :key="i"
@@ -57,6 +58,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
+      </v-list>
       </div>
     </v-navigation-drawer>
   </v-app-bar>
