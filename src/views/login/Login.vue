@@ -1,4 +1,5 @@
 <template>
+  <div class="login-wrap">
     <div class="login-cont">
         <div class="d-flex">
             <div class="loginimg" v-if="!$vuetify.breakpoint.xs">
@@ -26,6 +27,7 @@
                 선유도코오롱디지털타워 605호</p>
         </div>
     </div>
+  </div>    
 </template>
 <script>
 
