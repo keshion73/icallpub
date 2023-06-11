@@ -50,8 +50,8 @@
     <Modal @close="Modal = false" v-if="Modal" :icon="'icon01'" :title="'확인'">
       <p slot="mes">정말 로그아웃하시겠습니까?</p>
       <div slot="btn">
-        <v-btn x-large>취소</v-btn>
-        <v-btn color="btncolor" x-large>확인</v-btn>
+        <v-btn x-large class="btntxt">취소</v-btn>
+        <v-btn x-large class="btnbg">확인</v-btn>
       </div>
     </Modal>
   </div>
