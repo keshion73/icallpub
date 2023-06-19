@@ -2,6 +2,7 @@ import Charge from '@/views/dist/Charge'
 import ChargeHistory from '@/views/dist/ChargeHistory'
 import Refund from '@/views/dist/Refund'
 import RefundHistory from '@/views/dist/RefundHistory'
+import Usim from '@/views/dist/Usim'
 
 export default [
     {
@@ -39,6 +40,14 @@ export default [
                 component: RefundHistory,
                 meta: {
                     groupName: "충전",
+                },
+          },
+            {
+                path: '/dist/usim',
+                name: 'USIM 요청',
+                component: Usim,
+                meta: {
+                    groupName: "USIM",
                 },
             }
         ]
