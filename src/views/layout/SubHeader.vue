@@ -47,24 +47,15 @@
         <button class="logout-btn" v-if="!$vuetify.breakpoint.xs" @click="Modal=true">로그아웃</button>
       </div>
     </div>
-    <Modal @close="Modal = false" v-if="Modal" :icon="'icon01'" :title="'확인'">
-      <p slot="mes">정말 로그아웃하시겠습니까?</p>
-      <div slot="btn">
-        <v-btn x-large class="btntxt">취소</v-btn>
-        <v-btn x-large class="btnbg">확인</v-btn>
-      </div>
-    </Modal>
   </div>
 </template>
 <script>
   import Lnb from './Lnb.vue';
   import AppBar from "@/components/AppBar.vue";
-  import Modal from '../../components/Modal.vue'
   export default {
     components: {
       Lnb,
-      AppBar,
-      Modal
+      AppBar
     },
     mounted() {},
 
